@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belasteter Spannungsteiler</title>
+</head>
+<body>
+    <div><h1>Belasteter Spannungsteiler</h1></div>
+    <div><img src="Schema_belastet.png"></div>
+
+    <div>Ue [V]: <input id="i_u" type="number" placeholder=""></div>
+    <div>R1 [Ω]: <input id="i_r1" type="number" placeholder=""></div>
+    <div>R2 [Ω]<input id="i_r2" type="number" placeholder=""></div>
+    <div>RL [Ω]<input id="i_rl" type="number" placeholder=""></div>
+    
+    <div><button onclick="get_data()">submit</button></div>
+    
+    <table id="table">
+        <tr>
+            <th id="th">Rges [Ω]</th>
+            <th id="th">I [A]</th>
+            <th id="th">I2 [A]</th>
+            <th id="th">IL [A]</th>
+            <th id="th">U1 [V]</th>
+            <th id="th">U2 [V]</th>
+            <th id="th">UL [V]</th>
+        </tr>
+        <tr>
+            <td id="out_rges"></td>
+            <td id="out_strom"></td>
+            <td id="out_I2"></td>
+            <td id="out_IL"></td>
+            <td id="out_u1"></td>
+            <td id="out_u2"></td>
+            <td id="out_url"></td>
+        </tr>
+    </table>    
+    <div><a href="https://janzkockel.github.io/Spannungsteiler/"><img src="back.png" height="40"></a></div>
+    <script src="belasteter_script.js"></script>
+</body>
+<style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #table  {
+      border-collapse:collapse;
+      border-spacing:0;
+      text-align: center;
+    }
+    #table td{
+      font-family:Arial, sans-serif;
+      font-size:14px;
+      padding:10px 5px;
+      border-style:solid;
+      border-width:1px;
+      text-align: center;
+    }
+    #table th{
+      font-size:14px;
+      padding:10px 5px;
+      border-style:solid;
+      border-width:1px;
+      text-align: center;
+    }
+</style>
+</html>

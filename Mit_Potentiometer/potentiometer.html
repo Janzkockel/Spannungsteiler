@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potentiometer Spannungsteiler</title>
+</head>
+<body>
+  <center>
+    <div><h1>Spannungsteiler mit Potentiometer</h1></div>
+    
+    <canvas id="canvas_html" height="500" width="700"><img src="Schema.png"><img src="arrow.png"><img src="shrek.png"></canvas>
+    
+    <div class="div">Potentiometer Poti [Ω]: <input type="number" placeholder="Potentiometer [Ohm]" id="i_poti"></div>
+    <div class="div">n[%]: <input type="number" placeholder="n [%]" id="i_poti_up_per"></div>
+    <div class="div">Lastwiderstand Rl [Ω]: <input type="number" placeholder="Lastwiderstand [Ohm]" id="i_rl"></div>
+    <div class="div">Spannung Ue [V]: <input type="number" placeholder="Spannung [V]" id="i_u"></div>
+    
+    <div class="div"><button onclick="get_data()">submit</button><button onclick="reset()">Löschen</button></div>
+    
+
+
+    <div id="divtable">
+      <table id="table">
+        <tr>
+          <th class="th">I [A]</th>
+          <th class="th">I2 [A]</th>
+          <th class="th">IL [A]</th>
+          <th class="th">Upoti [V]</th>
+          <th class="th">Url [V]</th>
+          <th class="th">R1 [Ω]</th>
+          <th class="th">R2 [Ω]</th>
+        </tr>
+        <tr>
+          <td id="out_I"></td>
+          <td id="out_I2"></td>
+          <td id="out_I3"></td>
+          <td id="out_u_poti"></td>
+          <td id="out_u_rl"></td>
+          <td id="out_poti_up"></td>
+          <td id="out_poti_down"></td>
+        </tr>
+      </table>
+      
+    <div><a href="https://janzkockel.github.io/Spannungsteiler/"><img src="back.png" height="40"></a></div>
+    </div>
+    </center>
+    <script src="script_potentiometer.js"></script>
+  </body>
+<style>
+    body{
+      text-align: center;
+      margin-bottom: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .div{
+      margin-bottom: 5px;
+    }
+    #divtable{
+      text-align: center;
+    }
+    #table  {
+      border-collapse:collapse;
+      border-spacing:0;
+      text-align: center;
+    }
+    #table td{
+      font-family:Arial, sans-serif;
+      font-size:14px;
+      padding:10px 5px;
+      border-style:solid;
+      border-width:1px;
+      text-align: center;
+    }
+    #table th{
+      font-size:14px;
+      padding:10px 5px;
+      border-style:solid;
+      border-width:1px;
+      text-align: center;
+    }
+
+</style>
+</html>
